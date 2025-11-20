@@ -10,8 +10,8 @@ starGrob <- function(x=0.5, y=0.5,
                                lwd=0.5),
                      position.units = "npc", 
                      size.units="mm", ...){
-    if (! all(starshape %in% seq_len(30))){
-        stop("the starshape should be one of 1 to 30 !")
+    if (! all(starshape %in% seq_len(31))){
+        stop("the starshape should be one of 1 to 31 !")
     }
     N <- length(x)
     stopifnot(length(y)==N)
@@ -56,9 +56,15 @@ starshape_ntab <- c(5, 6, 7, 8,
                     0, 0, 0, 0,
                     0, 3, 3, 6,
                     50, 3, 0, 4,
+<<<<<<< HEAD
                     0, 0)
 
 names(starshape_ntab) <- seq_len(30)
+=======
+                    0, 0, 0)
+
+names(starshape_ntab) <- seq_len(31)
+>>>>>>> Add regular triangle left
 
 match_n <- function(starshape){
     n <- starshape_ntab[match(starshape,names(starshape_ntab))]
@@ -66,8 +72,13 @@ match_n <- function(starshape){
 }
 
 # index of starshape = aspect ratio (ar) 
+<<<<<<< HEAD
 starshape_artab <- c(rep(1, 9), 0.5, 1, 0.5, rep(1,12),0.5, 0.18, 1, 1, 1, 1)
 names(starshape_artab) <- seq_len(30)
+=======
+starshape_artab <- c(rep(1, 9), 0.5, 1, 0.5, rep(1,12),0.5, 0.18, 1, 1, 1, 1, 1)
+names(starshape_artab) <- seq_len(31)
+>>>>>>> Add regular triangle left
 
 match_ar <- function(starshape){
     ar <- starshape_artab[match(starshape,names(starshape_artab))]
@@ -112,6 +123,11 @@ build_polygenxy_id.lengths <- function(starshape, phase){
         plxy <- polygon_regular(n=n, phase=phase)
     }else if (starshape==17){
         plxy <- 1.2*matrix(c(-1, -1, 1, 0.5, -0.5, -0.5),nrow=3)
+<<<<<<< HEAD
+=======
+    }else if (starshape==31){
+        plxy <- matrix(c(-1, -1, 1, 1, -1, 0),nrow=3)
+>>>>>>> Add regular triangle left
     }else if (starshape==18){
         plxy <- 1.2*matrix(c(-1, 1, 1, 0.5, 0.5, -0.5),nrow=3) 
     }else if (starshape==19){

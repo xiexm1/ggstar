@@ -16,15 +16,16 @@ ggname <- getFromNamespace("ggname", "ggplot2")
 #' p <- show_starshapes()
 #' p
 show_starshapes <- function(...){
-    data <- data.frame(p=seq_len(30),
-                       x=c(0, c(seq_len(30)%%5)[-30]),
-                       y=c(0, c(seq_len(30)%/%5)[-30]))
-    dat1 <- data.frame(label=names(starshape_table[seq_len(30)]),
-                       x=c(0,c(seq_len(30)%%5)[-30]),
-                       y=c(0,c(seq_len(30)%/%5)[-30])+0.25)
-    dat2 <- data.frame(p=seq_len(30),
-                       x=c(0,c(seq_len(30)%%5)[-30]),
-                       y=c(0,c(seq_len(30)%/%5)[-30])-0.25)
+    data <- data.frame(p=seq_len(31),
+                       x=c(0, c(seq_len(31)%%5)[-31]),
+                       y=c(0, c(seq_len(31)%/%5)[-31]))
+    dat1 <- data.frame(label=names(starshape_table[seq_len(31)]),
+                       x=c(0,c(seq_len(31)%%5)[-31]),
+                       y=c(0,c(seq_len(31)%/%5)[-31])+0.25)
+    dat2 <- data.frame(p=seq_len(31),
+                       x=c(0,c(seq_len(31)%%5)[-31]),
+                       y=c(0,c(seq_len(31)%/%5)[-31])-0.25)
+
     p <- ggplot() +
          geom_star(data=data, aes_(x=~x, y=~y, starshape=~p), 
                    fill="red", size=3, show.legend=FALSE) +
@@ -41,10 +42,17 @@ show_starshapes <- function(...){
                ...)
     #p <- ggplot(data=data, aes(x=x,y=y)) +
     #     geom_star(aes(starshape=group),fill="red", size=3, show.legend=FALSE) +
+<<<<<<< HEAD
     #     geom_text(aes(label=names(starshape_table[seq_len(30)])),
     #                   nudge_y=0.3, size=3, fontface="bold.italic") +
     #     geom_text(aes(label=as.character(seq_len(30))), nudge_y=-0.2) + 
     #     scale_starshape_manual(values=c(seq_len(30))) +
+=======
+    #     geom_text(aes(label=names(starshape_table[seq_len(31)])),
+    #                   nudge_y=0.3, size=3, fontface="bold.italic") +
+    #     geom_text(aes(label=as.character(seq_len(31))), nudge_y=-0.2) + 
+    #     scale_starshape_manual(values=c(seq_len(31))) +
+>>>>>>> Add regular triangle left
     #     xlim(0.5, 5.5) + ylim(0.5, 5.5) +
     #     xlab(NULL) + ylab(NULL) +
     #     theme(axis.ticks=element_blank(),

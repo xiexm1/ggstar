@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1693642349023.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1775958381",
+    "id" : "3F7DF23C",
+    "lastKnownWriteTime" : 1650103622,
+    "last_content_update" : 1650103622,
+    "path" : "~/R/packages/ggstar2/vignettes/ggstar2.Rmd",
+    "project_path" : "vignettes/ggstar2.Rmd",
+    "properties" : {
+        "cursorPosition" : "105,0",
+        "scrollLine" : "99"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

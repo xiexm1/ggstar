@@ -132,7 +132,8 @@ starshape_table <- c(
                  "anise star4"              = 27,
                  "square diamond"           = 28,
                  "plus filled"              = 29,
-                 "antiparallelogram"        = 30)
+                 "antiparallelogram"        = 30,
+                 "left-triangle3"           = 31)
 
 # reference ggplot2
 translate_starshape_string <- function(starshape_string){
